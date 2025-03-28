@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraviGo - About Us</title>
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TraviGo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#dashboard">Itineraries</a></li>
+                <li><a href="index.html#bookings">Bookings</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="user-auth">
+            <a href="login.html" id="loginBtn">Login</a>
+            <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+            <div class="user-profile hidden">
+                <img src="./images/maleProfile.png" alt="Profile">
+                <span>Username</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Your Journey Begins Here</h1>
+                <p>Discover the world with TraviGo - your comprehensive travel companion</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2>About TraviGo</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>TraviGo is your ultimate travel planning platform, designed to make every journey memorable and hassle-free. Whether you're planning a weekend getaway or a month-long adventure, our comprehensive suite of tools helps you create the perfect itinerary, find the best accommodations, and discover hidden gems at your destination.</p>
+                        <p>Founded in 2022, TraviGo was born from a passion for travel and a desire to simplify the planning process. Our team of travel enthusiasts and tech experts combined their knowledge to create a platform that addresses the common challenges travelers face when organizing their trips.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="./images/travel.png" alt="Travel Planning">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-image">
+                        <img src="./images/mission.png" alt="Our Mission">
+                    </div>
+                    <div class="mission-text">
+                        <h2>Our Mission</h2>
+                        <p>At TraviGo, our mission is to empower travelers to explore the world with confidence and ease. We believe that travel should be accessible to everyone, and planning should be part of the enjoyment, not a source of stress.</p>
+                        <p>We strive to provide the most comprehensive, accurate, and user-friendly travel planning tools, enabling our users to create personalized itineraries that match their unique preferences and needs. By connecting travelers with exceptional accommodations, attractions, and local insights, we aim to foster memorable experiences that last a lifetime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2>What We Offer</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏨</div>
+                        <h3>Hotel Bookings</h3>
+                        <p>Find and book accommodations that suit your preferences and budget, from luxury resorts to cozy boutique hotels.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Attraction Discovery</h3>
+                        <p>Explore popular tourist destinations and hidden gems with our comprehensive database of attractions worldwide.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Itinerary Planning</h3>
+                        <p>Create detailed day-by-day travel plans with our intuitive itinerary builder, organizing your activities efficiently.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Budget Management</h3>
+                        <p>Keep track of your travel expenses and find options that align with your financial plans.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Local Insights</h3>
+                        <p>Access valuable information about local customs, transportation options, and dining recommendations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Access</h3>
+                        <p>Access your travel plans on the go with our mobile-friendly platform, ensuring you're never without your itinerary.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Plan Your Next Adventure?</h2>
+                    <p>Join thousands of travelers who have simplified their trip planning with TraviGo. Create your account today and start exploring!</p>
+                    <div class="cta-buttons">
+                        <a href="login.php?signup=true" class="btn-primary">Sign Up Now</a>
+                        <a href="explore.php" class="btn-secondary">Explore Destinations</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>TraviGo</h4>
+                <p>Plan your dream journey with ease</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TraviGo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>
