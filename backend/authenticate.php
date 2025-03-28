@@ -51,7 +51,7 @@ try {
     
     if ($result->num_rows === 0) {
         // User not found
-        $response['message'] = 'Invalid username or password';
+        $response['message'] = 'User does not exist';
         echo json_encode($response);
         $stmt->close();
         $conn->close();
@@ -60,11 +60,11 @@ try {
     
     // Fetch user data
     $user = $result->fetch_assoc();
-    
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     // Verify password
-    if (!password_verify($password, $user['password'])) {
+    if ($hashed_password == $user['password'] ) {
         // Incorrect password
-        $response['message'] = 'Invalid username or password';
+        $response['message'] = 'Invalid  password';
         echo json_encode($response);
         $stmt->close();
         $conn->close();

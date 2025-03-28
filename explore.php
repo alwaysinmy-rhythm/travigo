@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TraviGo - Explore Destinations</title>
-    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="./CSS/explore.css">
 </head>
 <body>
     <header>
@@ -16,12 +16,14 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="index.php#dashboard">Itineraries</a></li>
                 <li><a href="index.php#bookings">Bookings</a></li>
-                <li><a href="explore.html" class="active">Explore</a></li>
+                <li><a href="explore.php" class="active">Explore</a></li>
+                <li><a href="aboutus.php">About Us</a></li>
+
             </ul>
         </nav>
         <div class="user-auth">
-            <a href="login.html" id="loginBtn">Login</a>
-            <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+            <a href="login.php" id="loginBtn">Login</a>
+            <a href="login.php?signup=true" id="signupBtn">Sign Up</a>
             <div class="user-profile hidden">
                 <img src="./images/maleProfile.png" alt="Profile">
                 <span>Username</span>
@@ -143,6 +145,6 @@
         </div>
     </footer>
 
-    <script src="explore.js"></script>
+    <script src="./JS/explore.js"></script>
 </body>
 </html>

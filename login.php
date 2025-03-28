@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TraviGo - Login/Signup</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./CSS/login.css">
 </head>
 <body>
     <div class="container">
@@ -99,11 +99,11 @@
         </div>
         
         <div class="footer">
-            <a href="index.html" class="back-link">Back to Home</a>
+            <a href="index.php" class="back-link">Back to Home</a>
             <p>&copy; 2025 TraviGo. All rights reserved.</p>
         </div>
     </div>
 
-    <script src="login.js"></script>
+    <script src="./JS/login.js"></script>
 </body>
 </html>

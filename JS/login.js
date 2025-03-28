@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('remember', remember);
         
         // Send data to server using fetch API
-        fetch('authenticate.php', {
+        fetch('./backend/authenticate.php', {
             method: 'POST',
             body: formData
         })
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Redirect after a short delay
                 setTimeout(() => {
-                    window.location.href = 'index.html';
+                    window.location.href = './index.php';
                 }, 1000);
             } else {
                 // Show error message
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('zip', zip);
         
         // Send data to server using fetch API
-        fetch('register.php', {
+        fetch('./backend/register.php', {
             method: 'POST',
             body: formData
         })
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Redirect after delay
                 setTimeout(() => {
-                    window.location.href = 'index.php';
+                    window.location.href = './index.php';
                 }, 1500);
             } else {
                 // Show error message

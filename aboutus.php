@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TraviGo - About Us</title>
-    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="./CSS/aboutus.css">
 </head>
 <body>
     <header>
@@ -13,16 +13,16 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#dashboard">Itineraries</a></li>
-                <li><a href="index.html#bookings">Bookings</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php#dashboard">Itineraries</a></li>
+                <li><a href="index.php#bookings">Bookings</a></li>
+                <li><a href="explore.php">Explore</a></li>
+                <li><a href="about.php" class="active">About Us</a></li>
             </ul>
         </nav>
         <div class="user-auth">
-            <a href="login.html" id="loginBtn">Login</a>
-            <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+            <a href="login.php" id="loginBtn">Login</a>
+            <a href="login.php?signup=true" id="signupBtn">Sign Up</a>
             <div class="user-profile hidden">
                 <img src="./images/maleProfile.png" alt="Profile">
                 <span>Username</span>
@@ -131,7 +131,7 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.php">About Us</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Privacy Policy</a></li>
@@ -151,6 +151,6 @@
         </div>
     </footer>
 
-    <script src="about.js"></script>
+    <script src="./JS/about.js"></script>
 </body>
 </html>

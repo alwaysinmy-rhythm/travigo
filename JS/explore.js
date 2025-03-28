@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!currentUser) {
             alert('Please log in to add attractions to your itinerary.');
-            window.location.href = 'login.html';
+            window.location.href = '../login.php';
             return;
         }
         
