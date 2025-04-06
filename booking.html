@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travigo</title>
+  <link rel="stylesheet" href="./CSS/booking.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>TraviGo</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="itinerary.html">Itineraries</a></li>
+        <li><a href="booking.html" class="active">Bookings</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="user-auth">
+      <a href="login.html" id="loginBtn">Login</a>
+      <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+
+      <!-- if user is logged in this portion of the code should be shown so remove hidden from the class by js -->
+      <div class="user-profile hidden">
+        <span></span>
+        <button id="logoutBtn">LogOut</button>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+  <main>
+
+    <section class="search-section">
+        <div class="container">
+            <h1>Find Your Perfect Stay</h1>
+            <p>Search for accommodations in your destination city</p>
+            
+            <div class="search-box">
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="cityInput" placeholder="Enter city name (e.g. Dubai)">
+                </div>
+                <button id="searchBtn">Search</button>
+              </div>
+        </div>
+    </section>
+    
+    <section class="results-section">
+        <div class="container">
+            <div id="resultsContainer">
+                <!-- Results will be loaded here -->
+              </div>
+              <div id="noResults" class="no-results">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <p>No accommodations found for this city. Please try another location.</p>
+              </div>
+            
+        </div>
+    </section>
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Travel Planner</h4>
+        <p>Plan your dream journey with ease</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon">FB</a>
+          <a href="#" class="social-icon">TW</a>
+          <a href="#" class="social-icon">IG</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="./JS/booking.js"></script>
+</body>
+</html>

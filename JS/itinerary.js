@@ -79,7 +79,7 @@ function checkUserLoginStatus() {
         // Clear the trips container if it exists
         const tripsContainer = document.getElementById('trips-container');
         if (tripsContainer) {
-            tripsContainer.innerHTML = '<p>Please log in to see your trips.</p>';
+            tripsContainer.innerHTML = '<h2 style="margin: auto; width: fit-content;">Please log in to see your trips.</h2>';
         }
         
         // Update UI for logged out state

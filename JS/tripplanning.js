@@ -7,8 +7,7 @@ var currentUser = null;     //this var will contain the details about the logged
 document.addEventListener('DOMContentLoaded', function() {
     // Check if user is logged in via localStorage
     logoutBtn.addEventListener('click', handleLogout); 
-    checkUserLoginStatus();
-    
+    checkUserLoginStatus(); 
 })
 
 // Check localStorage for logged in user and update UI
@@ -38,9 +37,14 @@ function checkUserLoginStatus() {
         currentUser = userData;
         
         // Update UI to show username if user is logged in. 
-        updateUserInterface();
-        
+        updateUserInterface(); 
+          
+    }else{
+    // Redirect to home
+    window.location.href = '';
+
     }
+    
 }
 
 function updateUserInterface() {
@@ -149,7 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Load trip data from backend
+    if( !currentUser)window.location.replace('login.html');
     loadTripData();
+
+
 });
 
 // Load trip data from backend

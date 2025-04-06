@@ -34,122 +34,64 @@
         </div>
     </header>
 
+
+
+
+
+
+
+    <!-- --------------------------------------------------------------------------------------------------------- -->
     <main>
-        <!-- Dashboard Section -->
-        <section class="dashboard" id="dashboard">
-            <div class="welcome-banner">
-                <h2>Plan Your Dream Journey</h2>
-                <p>Create personalized itineraries, book accommodations, and discover amazing attractions</p>
-                <button id="createItineraryBtn">Create New Itinerary</button>
+        
+        
+        <div class="welcome-text">
+            <h1>Plan Your Dream Adventure</h1>
+            <p>Discover new destinations, create personalized itineraries, and book your perfect getaway with TravelPlanner. Your journey begins here.</p>
+        </div>
+        
+        <div class="features-container">
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h2>Book Your Trip</h2>
+                <p>Find and book flights, hotels, and transportation all in one place. Compare prices, read reviews, and secure the best deals for your next adventure.</p>
+                <a href="booking.html" class="feature-link">Book Now</a>
             </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h2>Create Itineraries</h2>
+                <p>Plan your perfect trip day by day. Organize activities, set schedules, and keep all your travel plans in one convenient place for easy access.</p>
+                <a href="itinerary.html" class="feature-link">Plan Trip</a>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <h2>Explore Destinations</h2>
+                <p>Discover popular attractions, hidden gems, and local favorites. Get travel tips, view photos, and find inspiration for your next destination.</p>
+                <a href="explore.html" class="feature-link">Start Exploring</a>
+            </div>
+        </div>
+        
+        
+        
 
-            <div class="search-section" id="bookings">
-                <h3>Search Destinations</h3>
-                <form id="searchForm">
-                    <div class="search-row">
-                        <div class="form-group">
-                            <label for="destination">Destination</label>
-                            <input type="text" id="destination" placeholder="City, Country">
-                        </div>
-                        <div class="form-group">
-                            <label for="dates">Dates</label>
-                            <input type="text" id="dates" placeholder="MM/DD/YYYY - MM/DD/YYYY">
-                        </div>
-                        <div class="form-group">
-                            <label for="travelers">Travelers</label>
-                            <select id="travelers">
-                                <option value="1">1 Person</option>
-                                <option value="2">2 People</option>
-                                <option value="3">3 People</option>
-                                <option value="4">4 People</option>
-                                <option value="5+">5+ People</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <button type="submit">Search</button>
-                    </div>
-                </form>
-            </div>
+        
 
-            <!-- Itinerary Builder Section -->
-            <div class="itinerary-builder hidden" id="itineraryBuilder">
-                <div class="itinerary-header">
-                    <input type="text" id="itineraryTitle" placeholder="My Dream Vacation">
-                    <div class="date-range">
-                        <input type="date" id="startDate">
-                        <span>to</span>
-                        <input type="date" id="endDate">
-                    </div>
-                    <button id="saveItineraryBtn">Save Itinerary</button>
-                </div>
-                
-                <div class="itinerary-content">
-                    <div class="days-container">
-                        <div class="day-tabs" id="dayTabs">
-                            <!-- Day tabs will be generated here -->
-                        </div>
-                        <button id="addDayBtn">+ Add Day</button>
-                    </div>
-                    
-                    <div class="day-activities" id="dayActivities">
-                        <!-- Activities for the selected day -->
-                        <div class="timeline">
-                            <!-- Timeline items will be added here -->
-                        </div>
-                        <button id="addActivityBtn">+ Add Activity</button>
-                    </div>
-                    
-                    <div class="map-container">
-                        <div id="map">
-                            <!-- Map will be rendered here -->
-                            <img src="https://placehold.co/600x400?text=Map+View" alt="Map placeholder">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Search Results Section -->
-            <div class="search-results hidden" id="searchResults">
-                <div class="filters">
-                    <div class="filter-group">
-                        <h4>Accommodation Type</h4>
-                        <label><input type="checkbox" value="hotel"> Hotels</label>
-                        <label><input type="checkbox" value="hostel"> Hostels</label>
-                        <label><input type="checkbox" value="apartment"> Apartments</label>
-                    </div>
-                    <div class="filter-group">
-                        <h4>Price Range</h4>
-                        <input type="range" min="0" max="1000" value="500" id="priceRange">
-                        <div class="range-labels">
-                            <span>$0</span>
-                            <span id="priceValue">$500</span>
-                            <span>$1000+</span>
-                        </div>
-                    </div>
-                    <div class="filter-group">
-                        <h4>Rating</h4>
-                        <label><input type="checkbox" value="5"> 5+ Stars</label>
-                        <label><input type="checkbox" value="4"> 4+ Stars</label>
-                        <label><input type="checkbox" value="3"> 3+ Stars</label>
-                    </div>
-                </div>
-                <div class="results-list" id="resultsList">
-                    <!-- Results will be loaded here -->
-                </div>
-            </div>
-
-            <!-- My Itineraries Section -->
-            <div class="my-itineraries hidden" id="myItineraries">
-                <h3>My Itineraries</h3>
-                <div class="itinerary-cards" id="itineraryCards">
-                    <!-- Itinerary cards will be loaded here -->
-                </div>
-            </div>
-        </section>
+        
+        
     </main>
 
+
+
+
+
+    <!-- --------------------------------------------------------------------------------------------------------- -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
