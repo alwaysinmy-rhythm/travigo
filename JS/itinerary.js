@@ -10,8 +10,6 @@ var currentUser = null;     //this var will contain the details about the logged
 var Trips = null;
 
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Check if user is logged in via localStorage
     logoutBtn.addEventListener('click', handleLogout); 
@@ -210,7 +208,7 @@ function getUserTrips(username) {
       // Create trip item container
       const tripItem = document.createElement('a');
       tripItem.className = 'trip-item';
-      tripItem.href = `./trip-details.php?tripname=${encodeURIComponent(typeof trip === 'string' ? trip : trip.tripname || '')}`;
+      tripItem.href = `./tripplanning.html?tripname=${encodeURIComponent(typeof trip === 'string' ? trip : trip.tripname || '')}`;
       
       // Create trip content
       const tripContent = document.createElement('div');
@@ -246,13 +244,7 @@ function getUserTrips(username) {
     
     // Add the list to the container
     tripsContainer.appendChild(tripsList);
-    
-    // Add a button to create a new trip
-    const newTripButton = document.createElement('a');
-    newTripButton.className = 'new-trip-button';
-    newTripButton.href = './create-trip.php';
-    newTripButton.textContent = 'Create New Itinerary';
-    tripsContainer.appendChild(newTripButton);
+
   }
 
 function handlenewTrip() {
