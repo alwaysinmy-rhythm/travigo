@@ -15,18 +15,21 @@
         <nav>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#dashboard">Itineraries</a></li>
-                <li><a href="#bookings">Bookings</a></li>
-                <li><a href="explore.php">Explore</a></li>
-                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="itinerary.html">Itineraries</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </nav>
         <div class="user-auth">
-            <a href="login.php" id="loginBtn">Login</a>
-            <a href="login.php?signup=true" id="signupBtn">Sign Up</a>
+            <a href="login.html" id="loginBtn">Login</a>
+            <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+            
+            <!-- if user is logged in this portion of the code should be shown so remove hidden from the class by js -->
             <div class="user-profile hidden">
                 <img src="./images/maleProfile.png" alt="Profile">
-                <span>Username</span>
+                <span></span>
+                <button id="logoutBtn">LogOut</button>
             </div>
         </div>
     </header>
@@ -101,7 +104,7 @@
                     <div class="map-container">
                         <div id="map">
                             <!-- Map will be rendered here -->
-                            <img src="https://via.placeholder.com/400x600?text=Map+View" alt="Map placeholder">
+                            <img src="https://placehold.co/600x400?text=Map+View" alt="Map placeholder">
                         </div>
                     </div>
                 </div>

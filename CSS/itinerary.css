@@ -1,0 +1,533 @@
+/* Explore Page Styles */
+:root {
+    --primary-blue: #1a73e8;
+    --dark-blue: #0d47a1;
+    --light-blue: #e8f0fe;
+    --lightest-blue: #f8fbff;
+    --accent-blue: #4285f4;
+    --pale-blue: #d2e3fc;
+    --text-dark: #202124;
+    --text-gray: #5f6368;
+    --border-color: #dadce0;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --error-color: #ea4335;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: var(--lightest-blue);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: var(--primary-blue);
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-blue);
+}
+
+nav ul li a.active {
+    position: relative;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+}
+
+.user-auth {
+    display: flex;
+    align-items: center;
+}
+
+.user-auth a {
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#loginBtn {
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+}
+
+#loginBtn:hover {
+    background-color: var(--light-blue);
+}
+
+#signupBtn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+#signupBtn:hover {
+    background-color: var(--dark-blue);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+button {
+    cursor: pointer;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    max-height : 50px; 
+} 
+
+ button:hover {
+    background-color: #005fa3;
+}
+
+.hidden {
+    display: none !important;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* Container for trips */
+#trips-container {
+    max-width: 800px;
+    min-height: 40vh;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Trips header */
+  .trips-header {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 12px;
+  }
+  
+  .trips-header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+    border-radius: 3px;
+  }
+  
+  /* List of trips */
+  .trips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* Individual trip item */
+  .trip-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #34495e;
+  }
+  
+  .trip-item:hover {
+    background-color: #edf5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.15);
+  }
+  
+  /* Trip content including icon and details */
+  .trip-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Trip icon */
+  .trip-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3498db;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  
+  /* Trip details */
+  .trip-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Trip name */
+  .trip-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  /* Arrow icon */
+  .trip-arrow {
+    color: #3498db;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+  }
+  
+  .trip-item:hover .trip-arrow {
+    transform: translateX(5px);
+  }
+  
+  /* New trip button */
+  .new-trip-bar{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+    padding-top: 20px;
+    
+  }
+  .new-trip-button {
+    display: block;
+    /* width: 100%; */
+    padding: 14px 20px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+  }
+  
+  .new-trip-button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 8px rgba(52, 152, 219, 0.3);
+  }
+  
+  /* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 10% auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+  position: relative;
+}
+
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #34495e;
+  font-size: 16px;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="text"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+
+.modal {
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  animation: slideIn 0.4s;
+}
+
+
+
+  /* Loading message */
+  .loading-message {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 20px;
+    font-style: italic;
+  }
+  
+  /* Empty trips message */
+  .empty-trips-message {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 30px 0;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Login required message */
+  .login-required-message {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 30px 0;
+    font-size: 16px;
+  }
+  
+  .login-required-message a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-required-message a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: #e74c3c;
+    text-align: center;
+    padding: 15px;
+    background-color: #fdeaea;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e74c3c;
+  }
+  
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 40px 0 20px;
+    margin-bottom: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-blue);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--light-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--white);
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--accent-blue);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}

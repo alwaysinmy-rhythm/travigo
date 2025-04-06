@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travigo</title>
+  <link rel="stylesheet" href="./CSS/itinerary.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>TraviGo</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="itinerary.html" class="active">Itineraries</a></li>
+        <li><a href="booking.html">Bookings</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="user-auth">
+      <a href="login.html" id="loginBtn">Login</a>
+      <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+
+      <!-- if user is logged in this portion of the code should be shown so remove hidden from the class by js -->
+      <div class="user-profile hidden">
+        <img src="./images/maleProfile.png" alt="Profile">
+        <span></span>
+        <button id="logoutBtn">LogOut</button>
+      </div>
+    </div>
+  </header>
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+  
+  
+  
+  <!-- Modal Structure -->
+  <div id="newTripModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Create New Trip</h2>
+      <form id="newTripForm">
+        <div class="form-group">
+          <label for="tripName">Trip Name:</label>
+          <input type="text" id="tripName" name="tripName" placeholder="Enter your trip name" required>
+        </div>
+        <button type="submit" class="submit-btn">Create Trip</button>
+      </form>
+    </div>
+  </div>
+  <div class="new-trip-bar" > <button class="new-trip-button" id="newtripBtn">+ Add new Trip</button></div>
+  <div id="trips-container"></div>
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Travel Planner</h4>
+        <p>Plan your dream journey with ease</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon">FB</a>
+          <a href="#" class="social-icon">TW</a>
+          <a href="#" class="social-icon">IG</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="./JS/itinerary.js"></script>
+</body>
+</html>

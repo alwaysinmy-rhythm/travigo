@@ -116,13 +116,28 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     cursor: pointer;
+    gap: 0.5rem;
 }
-
 .user-profile img {
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
+}
+button {
+    cursor: pointer;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    max-height : 50px; 
+} 
+
+ button:hover {
+    background-color: #005fa3;
 }
 
 .hidden {

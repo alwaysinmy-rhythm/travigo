@@ -1,11 +1,13 @@
 // DOM Elements
 const loginBtn = document.getElementById('loginBtn');
 const signupBtn = document.getElementById('signupBtn');
-const authModal = document.getElementById('authModal');
-const closeBtn = document.querySelector('.close');
-const tabBtns = document.querySelectorAll('.tab-btn');
-const loginForm = document.getElementById('loginForm');
-const signupForm = document.getElementById('signupForm');
+const logoutBtn = document.getElementById('logoutBtn')
+
+// const authModal = document.getElementById('authModal');
+// const closeBtn = document.querySelector('.close');
+// const loginForm = document.getElementById('loginForm');
+// const signupForm = document.getElementById('signupForm');
+
 const createItineraryBtn = document.getElementById('createItineraryBtn');
 const itineraryBuilder = document.getElementById('itineraryBuilder');
 const searchForm = document.getElementById('searchForm');
@@ -25,7 +27,7 @@ const resultsList = document.getElementById('resultsList');
 const itineraryCards = document.getElementById('itineraryCards');
 
 // Sample data for demo purposes
-var currentUser = null;
+var currentUser = null;     //this var will contain the details about the logged in user.
 var currentItinerary = null;
 var searchResultsData =  [
     {
@@ -115,30 +117,13 @@ var userItineraries = [
     }
 ];
 
-// When the page loads
+// When the page loads first this portion of code is executed.
 document.addEventListener('DOMContentLoaded', function() {
-    // Modal handling
-    loginBtn.addEventListener('click', openLoginModal);
-    signupBtn.addEventListener('click', openSignupModal);
-    closeBtn.addEventListener('click', closeModal);
+    // Check if user is logged in via localStorage
+    checkUserLoginStatus();
     
-    window.addEventListener('click', function(e) {
-        if (e.target === authModal) {
-            closeModal();
-        }
-    });
-    
-    // Tab switching
-    for (var i = 0; i < tabBtns.length; i++) {
-        tabBtns[i].addEventListener('click', function() {
-            switchTab(this.dataset.tab);
-        });
-    }
-    
-    // Form submissions
-    loginForm.addEventListener('submit', handleLogin);
-    signupForm.addEventListener('submit', handleSignup);
-    searchForm.addEventListener('submit', handleSearch);
+    logoutBtn.addEventListener('click', handleLogout); 
+    // searchForm.addEventListener('submit', handleSearch);
     
     // Itinerary builder
     createItineraryBtn.addEventListener('click', openItineraryBuilder);
@@ -150,87 +135,38 @@ document.addEventListener('DOMContentLoaded', function() {
     priceRange.addEventListener('input', updatePriceValue);
 });
 
-// Authentication Functions
-function openLoginModal() {
-    authModal.classList.remove('hidden');
-    switchTab('login');
-}
-
-function openSignupModal() {
-    authModal.classList.remove('hidden');
-    switchTab('signup');
-}
-
-function closeModal() {
-    authModal.classList.add('hidden');
-}
-
-function switchTab(tabId) {
-    // Hide all tab contents
-    var tabContents = document.querySelectorAll('.tab-content');
-    for (var i = 0; i < tabContents.length; i++) {
-        tabContents[i].classList.add('hidden');
+// Check localStorage for logged in user and update UI
+function checkUserLoginStatus() {
+    const storedUsername = localStorage.getItem('currentUser');
+    const storedUserData = localStorage.getItem('userData');
+    
+    if (storedUsername) {
+        // User is logged in
+        let userData = { name: storedUsername };
+        
+        // Try to get complete user data if available
+        if (storedUserData) {
+            try {
+                const parsedUserData = JSON.parse(storedUserData);
+                userData = {
+                    name: parsedUserData.usernaname || storedUsername,
+                    email: parsedUserData.email || '',
+                    avatar: './images/maleProfile.png'
+                };
+            } catch (e) {
+                console.error('Error parsing user data from localStorage', e);
+            }
+        }
+        
+        // Set current user
+        currentUser = userData;
+        
+        // Update UI to show username if user is logged in. 
+        updateUserInterface();
+        
+        // Show user itineraries
+        // showUserItineraries();
     }
-    
-    // Remove active class from all tab buttons
-    for (var i = 0; i < tabBtns.length; i++) {
-        tabBtns[i].classList.remove('active');
-    }
-    
-    // Show selected tab content and set active class
-    document.getElementById(tabId).classList.remove('hidden');
-    document.querySelector('[data-tab="' + tabId + '"]').classList.add('active');
-}
-
-function handleLogin(e) {
-    e.preventDefault();
-    
-    var email = document.getElementById('loginEmail').value;
-    var password = document.getElementById('loginPassword').value;
-    
-    // this would validate with a backend
-    // For demo, just simulate login
-    currentUser = {
-        name: 'Demo User',
-        email: email,
-        avatar: './images/maleProfile.png'
-    };
-    
-    updateUserInterface();
-    closeModal();
-    showUserItineraries();
-    
-    // Reset form
-    loginForm.reset();
-}
-
-function handleSignup(e) {
-    e.preventDefault();
-    
-    var name = document.getElementById('signupName').value;
-    var email = document.getElementById('signupEmail').value;
-    var password = document.getElementById('signupPassword').value;
-    var confirmPassword = document.getElementById('confirmPassword').value;
-    
-    // Check if passwords match
-    if (password !== confirmPassword) {
-        alert('Passwords do not match!');
-        return;
-    }
-    
-    //  this would register with a backend
-    // For demo, just simulate registration and login
-    currentUser = {
-        name: name,
-        email: email,
-        avatar: './images/maleProfile.png'
-    };
-    
-    updateUserInterface();
-    closeModal();
-    
-    // Reset form
-    signupForm.reset();
 }
 
 function updateUserInterface() {
@@ -247,7 +183,7 @@ function updateUserInterface() {
         var userImg = userProfile.querySelector('img');
         var userName = userProfile.querySelector('span');
         
-        userImg.src = currentUser.avatar;
+        // userImg.src = currentUser.avatar;
         userName.textContent = currentUser.name;
     } else {
         // Show login/signup buttons
@@ -259,8 +195,40 @@ function updateUserInterface() {
     }
 }
 
+function handleLogout(e) {
+    e.preventDefault();
+
+    // Clear user data from localStorage
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('userData');
+    
+    // Reset current user
+    currentUser = null;
+    
+    // Update UI
+    updateUserInterface();
+    
+    // Redirect to home
+    window.location.href = '';
+}
+
+
+
+/*
+------------------------------------------------------------
+Till here the code is about login,signup and authentication
+to show username and avatar in navbar if user has logged in
+other wise show login singup button  
+------------------------------------------------------------
+*/
+
+
 // Itinerary Builder Functions
 function openItineraryBuilder() {
+    if( !currentUser){
+        alert("You need to login/Signup First") ;
+        window.location.href = 'login.html'
+    }
     // Hide other sections
     searchResults.classList.add('hidden');
     myItineraries.classList.add('hidden');

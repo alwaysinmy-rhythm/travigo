@@ -67,6 +67,7 @@ nav a {
     padding: 0.5rem 0;
     border-bottom: 2px solid transparent;
     transition: all 0.3s;
+    color: #0077cc;
 }
 
 nav a:hover, nav a.active {
@@ -87,9 +88,10 @@ nav a:hover, nav a.active {
 }
 
 .user-profile img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    height: 75px;
-    width: 75x;
+    margin-right: 10px;
 }
 
 /* Main Content Styles */

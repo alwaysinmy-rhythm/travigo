@@ -13,20 +13,21 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="index.php#dashboard">Itineraries</a></li>
-                <li><a href="index.php#bookings">Bookings</a></li>
-                <li><a href="explore.php" class="active">Explore</a></li>
-                <li><a href="aboutus.php">About Us</a></li>
-
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="itinerary.html">Itineraries</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="explore.html" class="active">Explore</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </nav>
         <div class="user-auth">
-            <a href="login.php" id="loginBtn">Login</a>
-            <a href="login.php?signup=true" id="signupBtn">Sign Up</a>
-            <div class="user-profile hidden">
-                <img src="./images/maleProfile.png" alt="Profile">
-                <span>Username</span>
+            <a href="login.html" id="loginBtn">Login</a>
+            <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+            
+            <!-- if user is logged in this portion of the code should be shown so remove hidden from the class by js -->
+            <div class="user-profile  hidden">
+                <span></span>
+                <button id="logoutBtn">LogOut</button>
             </div>
         </div>
     </header>

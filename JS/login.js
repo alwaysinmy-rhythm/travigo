@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Redirect after a short delay
                 setTimeout(() => {
-                    window.location.href = './index.php';
+                    window.location.href = './index.html';
                 }, 1000);
             } else {
                 // Show error message
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Redirect after delay
                 setTimeout(() => {
-                    window.location.href = './index.php';
+                    window.location.href = './index.html';
                 }, 1500);
             } else {
                 // Show error message
