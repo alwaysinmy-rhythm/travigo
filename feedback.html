@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travigo</title>
+  <link rel="stylesheet" href="./CSS/feedback.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>TraviGo</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="itinerary.html">Itineraries</a></li>
+        <li><a href="booking.html">Bookings</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="user-auth">
+      <a href="login.html" id="loginBtn">Login</a>
+      <a href="login.html?signup=true" id="signupBtn">Sign Up</a>
+
+      <!-- if user is logged in this portion of the code should be shown so remove hidden from the class by js -->
+      <div class="user-profile hidden">
+        <img src="./images/maleProfile.png" alt="Profile">
+        <span></span>
+        <button id="logoutBtn">LogOut</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+        <div class="feedback-header">
+            <h1>Share Your Feedback</h1>
+            <p>We value your opinion and would love to hear about your experience with Travigo.</p>
+        </div>
+        
+        <div class="feedback-form-container">
+            <form id="feedbackForm" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Used</label>
+                    <select id="service" name="service">
+                        <option value="flight">Flight Booking</option>
+                        <option value="hotel">Hotel Booking</option>
+                        <option value="package">Vacation Package</option>
+                        <option value="car">Car Rental</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rating">Rate Your Experience</label>
+                    <div class="rating-container">
+                        <input type="radio" id="rating5" name="rating" value="5" required>
+                        <label for="rating5">5 - Excellent</label>
+                        
+                        <input type="radio" id="rating4" name="rating" value="4">
+                        <label for="rating4">4 - Good</label>
+                        
+                        <input type="radio" id="rating3" name="rating" value="3">
+                        <label for="rating3">3 - Average</label>
+                        
+                        <input type="radio" id="rating2" name="rating" value="2">
+                        <label for="rating2">2 - Below Average</label>
+                        
+                        <input type="radio" id="rating1" name="rating" value="1">
+                        <label for="rating1">1 - Poor</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback">Your Feedback</label>
+                    <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" id="submitBtn">Submit Feedback</button>
+                </div>
+            </form>
+            
+            <div id="statusMessage"></div>
+        </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Travel Planner</h4>
+        <p>Plan your dream journey with ease</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="index.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" class="social-icon" target="_blank">FB</a>
+          <a href="https://www.x.com" class="social-icon" target="_blank">TW</a>
+          <a href="https://www.instagram.com" class="social-icon" target="_blank">IG</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Travel Planner. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./JS/feeback.js"></script>
+</body>
+</html>

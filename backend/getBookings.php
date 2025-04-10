@@ -27,7 +27,7 @@ $city = $input['city'];
 
 try {
     // Create connection
-    $conn = new mysqli($servername, $username, "", $dbname);
+    $conn = new mysqli($servername, $username, "", $dbname, 3307);
     
     // Check connection
     if ($conn->connect_error) {

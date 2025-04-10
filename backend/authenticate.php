@@ -36,7 +36,7 @@ if (empty($username) || empty($password)) {
 
 try {
     // Create database connection
-    $conn = new mysqli($servername, $user, "", $dbname);
+    $conn = new mysqli($servername, $user, "", $dbname,, 3307);
 
     // Check connection
     if ($conn->connect_error) {

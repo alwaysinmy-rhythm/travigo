@@ -28,7 +28,7 @@ $tripName = $input['tripName'];
 
 try {
     // Create connection
-    $conn = new mysqli($servername, $user, "", $dbname);
+    $conn = new mysqli($servername, $user, "", $dbname , 3307);
     
     // Check connection
     if ($conn->connect_error) {

@@ -13,10 +13,10 @@ function getUserTrips($username) {
     $dbname = "travigo";
     $dbuser = "root";
     $dbpass = "";
-    
+    $db_port = 3307
     try {
         // Create database connection
-        $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbuser, "");
+        $conn = new PDO("mysql:host=$db_host;port=$db_port;dbname=$db_name", $db_user, $db_pass);
         
         // Set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

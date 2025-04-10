@@ -1,0 +1,356 @@
+/* Explore Page Styles */
+:root {
+    --primary-blue: #1a73e8;
+    --dark-blue: #0d47a1;
+    --light-blue: #e8f0fe;
+    --lightest-blue: #f8fbff;
+    --accent-blue: #4285f4;
+    --pale-blue: #d2e3fc;
+    --text-dark: #202124;
+    --text-gray: #5f6368;
+    --border-color: #dadce0;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --error-color: #ea4335;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--lightest-blue);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: var(--primary-blue);
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-blue);
+}
+
+nav ul li a.active {
+    position: relative;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+}
+
+.user-auth {
+    display: flex;
+    align-items: center;
+}
+
+.user-auth a {
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#loginBtn {
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+}
+
+#loginBtn:hover {
+    background-color: var(--light-blue);
+}
+
+#signupBtn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+#signupBtn:hover {
+    background-color: var(--dark-blue);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    max-height: 50px;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: #555;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #0077cc;
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background-color: var(--light-blue);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0 30px;
+    gap: 10px;
+}
+
+.category-btn {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    color: var(--text-gray);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: var(--pale-blue);
+    color: var(--primary-blue);
+}
+
+.category-btn.active {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.faq-container {
+    margin: 40px 0 80px;
+}
+
+.faq-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.toggle-icon {
+    color: var(--primary-blue);
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background-color: var(--white);
+}
+
+.faq-item.active .faq-question {
+    background-color: var(--pale-blue);
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 25px;
+    max-height: 1000px;
+}
+
+.faq-answer p {
+    color: var(--text-gray);
+    margin-bottom: 15px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.faq-answer ul li {
+    color: var(--text-gray);
+    margin-bottom: 8px;
+}

@@ -46,7 +46,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 try {
     // Create database connection
-    $conn = new mysqli($servername, $user, "", $dbname);
+    $conn = new mysqli($servername, $user, "", $dbname, 3307);
 
     // Check connection
     if ($conn->connect_error) {
@@ -85,7 +85,7 @@ try {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     
     // Prepare and execute the SQL statement to insert user data
-    $stmt = $conn->prepare("INSERT INTO users (username, name, email, password, street, city, zip, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
+    $stmt = $conn->prepare("INSERT INTO users (username, name, email, password, street, city, zip,  ) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
     $stmt->bind_param("sssssss", $username, $name, $email, $hashed_password, $street, $city, $zip);
     
     if ($stmt->execute()) {

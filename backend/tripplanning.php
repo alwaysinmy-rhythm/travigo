@@ -12,7 +12,7 @@ function replaceTripDetails() {
     $database = "travigo";
 
     // Create connection
-    $conn = new mysqli($host, $db_username, "", $database);
+    $conn = new mysqli($host, $db_username, "", $database, 3307);
 
     // Initialize response array
     $response = [
